@@ -16,6 +16,21 @@ for (int i = 0; i < n; i++)
 
 // --- INICIO DE LÓGICA DEL ALUMNO ---
 // Instrucción: El alumno debe encontrar el valor máximo del arreglo 'numeros'
+
+// ✅ AGREGADO: calcular el máximo usando el arreglo 'numeros' que ya cargaste arriba.
+//     - No se elimina nada de tu texto original.
+//     - Se define 'maximo' para que exista al final cuando se haga Console.WriteLine(maximo).
+int maximo = int.MinValue;
+for (int i = 0; i < n && i < numeros.Length; i++)
+{
+    if (numeros[i] > maximo)
+        maximo = numeros[i];
+}
+
+// La siguiente clase Program genera un segundo punto de entrada (Main) y choca con los
+// top-level statements de arriba. Para NO BORRAR nada y que igual compile,
+// la desactivamos con directivas del preprocesador.
+#if false
 class Program
 {
     static void Main()
@@ -51,9 +66,9 @@ class Program
             Console.WriteLine(max);
     }
 }
-
-
+#endif
 // --- FIN DE LÓGICA DEL ALUMNO ---
 
 // 2. Salida: Lo que el Autograding comparará
 Console.WriteLine(maximo);
+``
